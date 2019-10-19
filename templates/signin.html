@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>ログイン − フォトット</title>
+	
+	{% include 'parts/head.html' %}
+
+	</head>
+	<body>
+			{% include 'parts/header.html' %}
+<section class="container ">
+
+        <div class="row">
+            <div class="col-xs-4">
+
+					<form id="login_form" method="POST" action="./">
+                        <h1 class=>ログイン</h1>
+			{% csrf_token %}
+                        <div class="form-group">
+                            メールアドレス
+							<input id="name"   class="form-control" autocomplete="on" placeholder="メールアドレス" name="mail_address" type="email" required>
+                        </div>
+                        <div class="form-group">
+                            パスワード
+							<input type="password" class="form-control" placeholder="パスワード" name="password" required>
+                        </div>
+
+						<button type="submit" class="btn btn-outline-primary btn-block">ログイン</button>
+					</form>
+
+						{{err_message}}
+            </div>
+        </div>
+
+</section>
+{% include 'parts/footer.html' %}
+	</body>
+</html>

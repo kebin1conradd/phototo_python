@@ -1,0 +1,11 @@
+<div>
+	<a href="/">top</a>
+	{% if request.session.user_id == false%}<a href="/signin/">ログイン</a>
+						<a  href="/userSignUp/">新規登録</a>
+					{%elif request.session.user_id　%}
+					<a  href="/upload/">アップロード</a>
+					
+					{% endif %}
+					{% if request.session.user_id %}<a href="/signout/">ログアウト</a>{% endif %}
+<header>
+</header>

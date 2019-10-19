@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>フォトット</title>
+    {% include 'parts/head.html' %}
+
+
+</head>
+<body>
+        {% include 'parts/header.html' %}
+<br>
+<section class="container-fluid wide">
+    <div class="row">
+
+     
+                {% for top_photo in top_photo_list%}
+                <div class="col-xs-2">
+                    <p>{{top_photo.title}}</p>
+                    <img width ="200" src="{{top_photo.img_url}}">
+
+                </div>
+                {% endfor %}
+
+    </div>
+</section>
+{% include 'parts/footer.html' %}
+</body>
+</html>

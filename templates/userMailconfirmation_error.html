@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>フォトット</title>
+	{% include 'parts/head.html' %}
+
+</head>
+<body>
+        {% include 'parts/header.html' %}
+    <p >
+        {%if is_activate_invalid%}
+        既に認証を終えているか、
+        指定された認証コードが間違っています。
+        {%endif%}
+    </p>
+    {% include 'parts/footer.html' %}
+</body>
+</html>

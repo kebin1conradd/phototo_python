@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>フォトット − loginエラー</title>
+	{% include 'parts/head.html' %}
+
+</head>
+<body>
+        {% include 'parts/header.html' %}
+
+		<ul >
+			<li>{{error_message}}</li>
+			{%if is_duplicate_mail%}
+			<li >同じメールアドレスがすでに登録されています。</li>
+			{%endif%}
+		</ul>
+
+{% include 'parts/footer.html' %}
+</body>
+</html>
